@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <title>CV LD</title>
     <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -26,7 +54,7 @@
         <p>Etudiant ingénieur ECE Paris</p>
     </div>
 </main>
-<main>
+<main id="projet">
         <header>
             <H3>Mes meilleurs projets</H3>
             <p class="grey_text">Voici une liste non exhaustive des projets que j'ai été amené à développé (intra et extra scolaire) dont je suis fière.</p>
@@ -50,12 +78,60 @@
     </section>
 </main>
 
-<main>
+<main id="profil">
     <header>
         <H3>Mon profil</H3>
-
     </header>
+    <main>
+        <img src="img/moi.png" class="image_profil">
+        <p class="grey_text" style="margin-left: 20%; margin-right: 20%"> Passionné par les nouvelles technologies, j'ai choisis une formation d'ingénieur généraliste, la majorité de mes cours sont composés de mathématiques, physique, électronique et informatique. J’ai cependant une sensibilité personnelle pour la politique et l’engagement citoyen et plus particulièrement en matière d’environnement et de développement durable. Je souhaite dans les prochaines années de mon cycle éducatif me spécialiser sur les énergies renouvelables. Cet intérêt pour les énergies propres est né de mon envie de participer, à travers mon futur travail, à la mutation de notre société vers un mode de consommation plus durable.</p>
+    </main>
 </main>
+
+<footer id="contacter">
+    <h3 style="color: white; margin-bottom: 0%">Me contacter</h3>
+    <section>
+        <article style="margin: 1%" >
+            <div class="mesInfos">
+                <img src="img/adresse.png" class="icone">
+                <p>17 villa Seurat, 75014, Paris </p>
+            </div>
+            <div class="mesInfos">
+                <img src="img/phone.png" class="icone">
+                <p>+33 6 66 17 25 38 </p>
+            </div>
+            <div class="mesInfos">
+                <img src="img/mail.png" class="icone">
+                <p>leonard.devincre@edu.ece.fr </p>
+            </div>
+            <div class="mesInfos">
+                <img src="img/linkedIn.png" class="icone">
+                <p>@leonardevincre </p>
+            </div>
+        </article>
+        <article style="margin: 1%"">
+            <form action="action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <p></p>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <p></p>
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <p></p>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                <p></p>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+</footer>
 
 
 </body>

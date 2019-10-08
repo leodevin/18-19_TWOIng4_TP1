@@ -12,7 +12,7 @@ EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
 main {
     height: 100%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 
 /*
@@ -63,7 +63,6 @@ MENU STYLES
 }
 
 /* hover animation */
-
 .menu__link{
     position: relative;
     overflow: hidden;
@@ -152,7 +151,9 @@ body{
 
 #trait{
     border-top: 3px solid white;
-    width : 100%;
+    width : 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 H2{
@@ -182,6 +183,9 @@ section{
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .image_projet{
@@ -190,4 +194,63 @@ section{
     border-radius: 5px;
 }
 
+.image_profil{
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20%;
+}
 
+footer {
+    width: 100%;
+    bottom: 0;
+    background-color: grey;
+    color: white;
+}
+
+.mesInfos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.icone{
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin-right: 10%;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+textarea{
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
