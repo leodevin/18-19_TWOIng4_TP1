@@ -33,10 +33,14 @@
         });
     </script>
 </head>
+
+
+
 <body>
-<header class="menu">
-    <p style="color: white; font-size: x-large;">Léonard Devincre</p>
-    <nav>
+<header class="onTopBlack">
+    <p style="color: white; font-size: x-large; width: 20%; text-align: center">Léonard Devincre</p>
+
+    <nav class="menu">
         <ul class="menu__list">
             <li class="menu__group"><a href="#projet" class="menu__link">Mes projets</a></li>
             <li class="menu__group"><a href="#experience" class="menu__link">Mes expriences</a></li>
@@ -47,46 +51,92 @@
     </nav>
 </header>
 
-<main class="intro">
-    <div class="intro_box">
-        <p >Léonard Devincre</p>
+<main class="principal">
+    <main class="intro" style="">
+        <div class="intro_box" >
+            <p >Léonard Devincre</p>
             <p id="trait"></p>
-        <p>Etudiant ingénieur ECE Paris</p>
-    </div>
-</main>
-<main id="projet">
+            <p>Etudiant ingénieur ECE Paris</p>
+        </div>
+
+        <div class="fullscreen-bg">
+            <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg-video">
+                <source src="video/backG.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <main id="projet" class="mainSecond">
         <header>
             <H3>Mes meilleurs projets</H3>
             <p class="grey_text">Voici une liste non exhaustive des projets que j'ai été amené à développé (intra et extra scolaire) dont je suis fière.</p>
         </header>
-    <section>
-        <article>
-            <img class="image_projet" src="img/madagascar.jpg" >
-            <h2>Voyage solidaire à Madagascar</h2>
-            <p class="grey_text">Description du projetProjet en équipe (5 amis) dans le cadre des scouts et guides de France. La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants (babysitting, organisation de réception, déménagement etc).</p>
-        </article>
-        <article>
-            <img class="image_projet" src="img/Veelo.jpg">
-            <h2>Veelo</h2>
-            <p class="grey_text">Projet étudiants récompensé par le deuxième prix du jury aux graines d’Innov Awards (prix accordé aux meilleurs projets de la promotion )</p>
-        </article>
-        <article>
-            <img class="image_projet" src="img/lumieres.jpg">
-            <h2>Lampes connectées</h2>
-            <p class="grey_text">Commande de la luminosité, intensité et couleur de trois lampes HueLights via une application Android. Utilisation du serveur CloudMQTT et d'une carte Arduino connecté, via un shield-Ethernet. Découverte du fonctionnement des "Beacons" pour détecter via Bluetooth les lampes à proximité.</p>
-        </article>
-    </section>
-</main>
+        <section>
+            <article>
+                <img class="image_projet" src="img/madagascar.jpg" >
+                <h2>Voyage solidaire à Madagascar</h2>
+                <p class="grey_text">Description du projetProjet en équipe (5 amis) dans le cadre des scouts et guides de France. La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants (babysitting, organisation de réception, déménagement etc).</p>
+            </article>
+            <article>
+                <img class="image_projet" src="img/Veelo.jpg" style="height: 40%; width: 100%">
+                <h2>Veelo</h2>
+                <p class="grey_text">Projet étudiants récompensé par le deuxième prix du jury aux graines d’Innov Awards (prix accordé aux meilleurs projets de la promotion )</p>
+            </article>
+            <article>
+                <img class="image_projet" src="img/lumieres.jpg" style="height: 40%; ">
+                <h2>Lampes connectées</h2>
+                <p class="grey_text">Commande de la luminosité, intensité et couleur de trois lampes HueLights via une application Android. Utilisation du serveur CloudMQTT et d'une carte Arduino connecté, via un shield-Ethernet. Découverte du fonctionnement des "Beacons" pour détecter via Bluetooth les lampes à proximité.</p>
+            </article>
+        </section>
+    </main>
 
-<main id="profil">
-    <header>
-        <H3>Mon profil</H3>
-    </header>
-    <main>
-        <img src="img/moi.png" class="image_profil">
-        <p class="grey_text" style="margin-left: 20%; margin-right: 20%"> Passionné par les nouvelles technologies, j'ai choisis une formation d'ingénieur généraliste, la majorité de mes cours sont composés de mathématiques, physique, électronique et informatique. J’ai cependant une sensibilité personnelle pour la politique et l’engagement citoyen et plus particulièrement en matière d’environnement et de développement durable. Je souhaite dans les prochaines années de mon cycle éducatif me spécialiser sur les énergies renouvelables. Cet intérêt pour les énergies propres est né de mon envie de participer, à travers mon futur travail, à la mutation de notre société vers un mode de consommation plus durable.</p>
+    <main id="etudes" class="mainSecond">
+        <header>
+            <h3>Mes études</h3>
+        </header>
+
+        <section class="timeline">
+            <ul>
+                <li>
+                    <div>
+                        <time>2018</time>
+                        <p class="timeText">
+                            Erasmus Malmö University (Suède) - Un semestre en sciences informatiques, 2018.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2016-2021</time>
+                        <p class="timeText">
+                            ECE Paris, France, École d'ingénieur généraliste - Seconde année du cycle ingénieur (BAC +4).
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2016</time>
+                        <p class="timeText">
+                            BAC scientifique spécialité mathématiques
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <main id="profil" class="mainSecond">
+        <header>
+            <H3>Mon profil</H3>
+        </header>
+        <div class="profil">
+            <img src="img/moi.png" class="image_profil">
+            <p class="grey_text" style="margin-left: 20%; margin-right: 20%"> Passionné par les nouvelles technologies, j'ai choisis une formation d'ingénieur généraliste, la majorité de mes cours sont composés de mathématiques, physique, électronique et informatique. J’ai cependant une sensibilité personnelle pour la politique et l’engagement citoyen et plus particulièrement en matière d’environnement et de développement durable. Je souhaite dans les prochaines années de mon cycle éducatif me spécialiser sur les énergies renouvelables. Cet intérêt pour les énergies propres est né de mon envie de participer, à travers mon futur travail, à la mutation de notre société vers un mode de consommation plus durable.</p>
+        </div>
     </main>
 </main>
+
 
 <footer id="contacter">
     <h3 style="color: white; margin-bottom: 0%">Me contacter</h3>
@@ -111,28 +161,68 @@
         </article>
         <article style="margin: 1%"">
             <form action="action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <p></p>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <p></p>
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
-                <p></p>
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-                <p></p>
+                <p>
+                    <label for="fPseudo">Pseudo</label>
+                    <input type="text" id="fPseudo" name="firstname" placeholder="Your name..">
+
+                    <label for="lMail">Mail</label>
+                    <input type="text" id="lMail" name="lastname" placeholder="Your email..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                </p>
                 <input type="submit" value="Submit">
             </form>
         </article>
     </section>
 </footer>
 
+<!-- Script for timeline -->
+<script>
+    (function() {
+
+        'use strict';
+
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+
+    })();
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46156385-1', 'cssscript.com');
+    ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

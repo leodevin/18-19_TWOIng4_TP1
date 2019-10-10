@@ -1,189 +1,41 @@
-
-/*
-=====
-EFFECT FADING OUT FOR SIBLINGS MENU OPTIONS
-=====
-*/
-
-.menu:hover .menu__link:not(:hover){
-    color: #2D8A67;
-}
-
-
-main {
+/* Classe du main principal qui englobe tous les autres mains secondaires */
+.principal{
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Classe du main secondaire qui définis chaque grosse partie du site */
+.mainSecond{
     background-color: whitesmoke;
+    padding-top: 3;
+    padding-bottom: 3%;
 }
 
 /*
 =====
-MENU STYLES
+Styles
 =====
 */
-
-/* core styles */
-.menu{
-    background-color: #40C575;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
-.menu__list{
-    display: flex;
-    text-align: center;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-.menu__group{
-     flex-grow: 1;
- }
-
-.menu__link{
-    display: block;
-    padding: 2rem 1.5rem;
-
-    will-change: color;
-    transition: color .25s ease-out;
-
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-
-/* states */
-.menu__link:focus{
-    outline: 2px solid #fff;
-}
-
-/* hover animation */
-.menu__link{
-    position: relative;
-    overflow: hidden;
-}
-
-.menu__link::before,
-.menu__link::after{
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: #fff;
-
-    will-change: width;
-    transition: width .05s ease-out;
-
-    position: absolute;
-    bottom: 0;
-}
-
-.menu__link::before{
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.menu__link::after{
-    right: 50%;
-    transform: translateX(50%);
-}
-
-.menu__link:hover::before,
-.menu__link:hover::after{
-    width: 100%;
-    transition-duration: .15s;
-}
-
-/*
-=====
-DEMO
-=====
-*/
-
-@media (min-width: 768px){
-
-    html{
-        font-size: 62.5%;
-    }
-}
-
-@media (max-width: 767px){
-
-    html{
-        font-size: 50%;
-    }
-}
-
 body{
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
-    font-size: 1.6rem;
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-
-.intro{
-    text-align: center;
-    font-size: xx-large;
-    color: white;
-    background-image: url("../img/colorful09.jpg");
-}
-
-.intro_box{
-    padding: 20%;
-}
-
-.page{
-    box-sizing: border-box;
-    max-width: 640px;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    order: 1;
-    margin: auto;
-}
-
-#trait{
-    border-top: 3px solid white;
-    width : 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* Définition des titres */
 H2{
     text-align: center;
     font-size: large;
     color: black;
 }
-
 H3{
     text-align: center;
     font-size: xx-large;
     color: black;
 }
-
-.grey_text{
-    text-align: center;
-    color: darkgrey;
-}
-
-article{
-    text-align: center;
-    margin: 5%;
-}
-
 section{
     display: flex;
     flex-direction: row;
@@ -193,50 +45,361 @@ section{
     margin-right: auto;
     width: 100%;
 }
+article{
+    text-align: center;
+    margin: 5%;
+}
 
+
+
+/*
+=====
+Header - Navbar
+=====
+*/
+
+/* Header */
+.onTopBlack{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar - Fondu des onglets non selectionné */
+.menu:hover .menu__link:not(:hover){
+    color: dimgrey;
+}
+
+/* Style de la navbar */
+.menu{
+    width: 100%;
+}
+.menu__list{
+    display: flex;
+    text-align: center;
+}
+.menu__group{
+    flex-grow: 1;
+}
+.menu__link{
+    display: block;
+    padding: 1rem 1.5rem;
+    will-change: color;
+    /*Changement couleur texte non selextionné */
+    transition: color .25s ease-out;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* states */
+.menu__link:focus{
+    outline: 2px solid #fff;
+}
+/* hover animation */
+.menu__link{
+    position: relative;
+    overflow: hidden;
+}
+/* Apparition et disparition de la ligne sous le texte quand on passe dessus */
+.menu__link::before,
+.menu__link::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    will-change: width;
+    transition: width .05s ease-out;
+    position: absolute;
+    bottom: 0;
+}
+/* centrer horizontalement le sous lignage */
+.menu__link::before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu__link::after{
+    right: 50%;
+    transform: translateX(50%);
+}
+.menu__link:hover::before,
+.menu__link:hover::after{
+    width: 75%;
+    transition-duration: .15s;
+}
+
+
+/*
+=====
+Main d'introduction
+=====
+*/
+.intro_box{
+    padding: 18%;
+}
+.intro{
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    /*
+    background-image: url("../img/colorful09.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    */
+}
+#trait{
+    border-top: 3px solid white;
+    width : 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grey_text{
+    text-align: center;
+    color: darkgrey;
+}
+
+
+/*
+=====
+Vidéo background intro
+=====
+*/
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+        height: 300%;
+        top: -100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg-video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+/*
+=====
+Main projet
+=====
+*/
 .image_projet{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 40%;
+    width: 50%;
     border-radius: 5px;
 }
 
+
+/*
+=====
+Main profil
+=====
+*/
 .image_profil{
     border-radius: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
+
+.profil{
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+/*
+=====
+Main études
+=====
+*/
+/*Timeline */
+/* Ressources : https://www.cssscript.com/responsive-animated-timeline-javascript-css3/ */
+.timeline ul {
+    background: #b2bba7;
+    padding: 30px 0;
+}
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 0px;
+    background: #b2bba7;
+}
+/*affiche les ronds sur la timeline après chaque balise li*/
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+}
+/* Boite qui contient les infos sur chaque date*/
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 360px;
+    padding: 15px;
+    background: darkgrey;
+    border-radius: 2%;
+}
+/* Petite fleche devant chaque boite*/
+.timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+/* fleches coté droit */
+.timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent darkslategray transparent transparent;
+}
+.timeline ul li:nth-child(even) div {
+    left: -439px;
+}
+/* fleche coté gauche */
+.timeline ul li:nth-child(even) div::before {
+    right: -16px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent darkslategray;
+}
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+}
+.timeText{
+    color: white;
+}
+/* Effets Timeline*/
+.timeline ul li::after {
+    transition: background .5s ease-in-out;
+}
+/* Couleur rond pour les dates */
+.timeline ul li.in-view::after {
+    background: darkslategray;
+}
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Media queries Timeline*/
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #E86361 transparent transparent;
+    }
+}
+
+/*
+=====
+Footer
+=====
+*/
 footer {
     width: 100%;
     bottom: 0;
     background-color: grey;
     color: white;
 }
-
 .mesInfos{
     display: flex;
     flex-direction: row;
     margin-top: 2%;
 }
-
 .icone{
     display: block;
     width: 10%;
     height: 10%;
     margin-right: 10%;
 }
-
 input[type=text], select {
-    width: 50%;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
 input[type=submit] {
     width: 100%;
     color: white;
@@ -246,7 +409,6 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-
 textarea{
     width: 100%;
     color: white;
@@ -256,7 +418,6 @@ textarea{
     border-radius: 4px;
     cursor: pointer;
 }
-
 input[type=submit]:hover {
     background-color: #45a049;
 }
