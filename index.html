@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CV LD</title>
+    <title>CV Léonard D.</title>
     <link rel="stylesheet" href="CSS/style.css">
 
+    <!-- Smooth scrolling -->
+    <!-- Ressource : https://www.w3schools.com/howto/howto_css_smooth_scroll.asp -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -34,8 +36,6 @@
     </script>
 </head>
 
-
-
 <body>
 <header class="onTopBlack">
     <p style="color: white; font-size: x-large; width: 20%; text-align: center">Léonard Devincre</p>
@@ -43,27 +43,27 @@
     <nav class="menu">
         <ul class="menu__list">
             <li class="menu__group"><a href="#projet" class="menu__link">Mes projets</a></li>
-            <li class="menu__group"><a href="#experience" class="menu__link">Mes expriences</a></li>
             <li class="menu__group"><a href="#etudes" class="menu__link">Mes études</a></li>
-            <li class="menu__group"><a href="#langues" class="menu__link">Langues & compétences</a></li>
             <li class="menu__group"><a href="#profil" class="menu__link">Mon profil</a></li>
         </ul>
     </nav>
 </header>
 
+<!-- Le main principal contient le main d'intro et 3 main secondaires : projet, etudes et profil -->
 <main class="principal">
-    <main class="intro" style="">
-        <div class="intro_box" >
+    <main class="intro">
+        <H3 class="intro_box" style="color: white">
             <p >Léonard Devincre</p>
             <p id="trait"></p>
             <p>Etudiant ingénieur ECE Paris</p>
-        </div>
+        </H3>
 
-        <div class="fullscreen-bg">
+        <!-- Vidéo  de fond sur l'intro -->
+        <section class="fullscreen-bg">
             <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg-video">
                 <source src="video/backG.mp4" type="video/mp4">
             </video>
-        </div>
+        </section>
     </main>
 
     <main id="projet" class="mainSecond">
@@ -130,10 +130,10 @@
         <header>
             <H3>Mon profil</H3>
         </header>
-        <div class="profil">
+        <article class="profil" style="margin: 0%">
             <img src="img/moi.png" class="image_profil">
             <p class="grey_text" style="margin-left: 20%; margin-right: 20%"> Passionné par les nouvelles technologies, j'ai choisis une formation d'ingénieur généraliste, la majorité de mes cours sont composés de mathématiques, physique, électronique et informatique. J’ai cependant une sensibilité personnelle pour la politique et l’engagement citoyen et plus particulièrement en matière d’environnement et de développement durable. Je souhaite dans les prochaines années de mon cycle éducatif me spécialiser sur les énergies renouvelables. Cet intérêt pour les énergies propres est né de mon envie de participer, à travers mon futur travail, à la mutation de notre société vers un mode de consommation plus durable.</p>
-        </div>
+        </article>
     </main>
 </main>
 
@@ -142,22 +142,22 @@
     <h3 style="color: white; margin-bottom: 0%">Me contacter</h3>
     <section>
         <article style="margin: 1%" >
-            <div class="mesInfos">
+            <article class="mesInfos">
                 <img src="img/adresse.png" class="icone">
                 <p>17 villa Seurat, 75014, Paris </p>
-            </div>
-            <div class="mesInfos">
+            </article>
+            <article class="mesInfos">
                 <img src="img/phone.png" class="icone">
                 <p>+33 6 66 17 25 38 </p>
-            </div>
-            <div class="mesInfos">
+            </article>
+            <article class="mesInfos">
                 <img src="img/mail.png" class="icone">
                 <p>leonard.devincre@edu.ece.fr </p>
-            </div>
-            <div class="mesInfos">
+            </article>
+            <article class="mesInfos">
                 <img src="img/linkedIn.png" class="icone">
                 <p>@leonardevincre </p>
-            </div>
+            </article>
         </article>
         <article style="margin: 1%"">
             <form action="action_page.php">
@@ -178,6 +178,7 @@
 </footer>
 
 <!-- Script for timeline -->
+/* Ressources : https://www.cssscript.com/responsive-animated-timeline-javascript-css3/ */
 <script>
     (function() {
 
@@ -212,16 +213,6 @@
         window.addEventListener("scroll", callbackFunc);
 
     })();
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-46156385-1', 'cssscript.com');
-    ga('send', 'pageview');
-
 </script>
 
 </body>
