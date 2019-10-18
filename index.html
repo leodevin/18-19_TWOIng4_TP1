@@ -43,8 +43,10 @@
     <nav class="menu">
         <ul class="menu__list">
             <li class="menu__group"><a href="#projet" class="menu__link">Mes projets</a></li>
+            <li class="menu__group"><a href="#competences" class="menu__link">Mes compétences</a></li>
             <li class="menu__group"><a href="#etudes" class="menu__link">Mes études</a></li>
             <li class="menu__group"><a href="#profil" class="menu__link">Mon profil</a></li>
+            <li class="menu__group"><a href="#contacter" class="menu__link">Me contacter</a></li>
         </ul>
     </nav>
 </header>
@@ -61,7 +63,7 @@
         <!-- Vidéo  de fond sur l'intro -->
         <section class="fullscreen-bg">
             <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg-video">
-                <source src="video/backG.mp4" type="video/mp4">
+                <source src="video/eolienne.mp4" type="video/mp4">
             </video>
         </section>
     </main>
@@ -71,21 +73,45 @@
             <H3>Mes meilleurs projets</H3>
             <p class="grey_text">Voici une liste non exhaustive des projets que j'ai été amené à développé (intra et extra scolaire) dont je suis fière.</p>
         </header>
-        <section>
+        <section style="justify-content: space-between">
             <article>
-                <img class="image_projet" src="img/madagascar.jpg" >
+                <img class="image_projet" src="img/madagascar.jpg"  style="height: 40%; width: 80%">
                 <h2>Voyage solidaire à Madagascar</h2>
-                <p class="grey_text">Description du projetProjet en équipe (5 amis) dans le cadre des scouts et guides de France. La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants (babysitting, organisation de réception, déménagement etc).</p>
+                <p class="grey_text" style="text-align: justify">Description du projetProjet en équipe (5 amis) dans le cadre des scouts et guides de France. La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants (babysitting, organisation de réception, déménagement etc).</p>
             </article>
-            <article>
-                <img class="image_projet" src="img/Veelo.jpg" style="height: 40%; width: 100%">
+            <article >
+                <img class="image_projet" src="img/Veelo.jpg" style="height: 40%; width: 80%">
                 <h2>Veelo</h2>
-                <p class="grey_text">Projet étudiants récompensé par le deuxième prix du jury aux graines d’Innov Awards (prix accordé aux meilleurs projets de la promotion )</p>
+                <p class="grey_text" style="text-align: justify">Projet récompensé par le deuxième prix du jury aux graines d’Innov Awards (prix accordé aux meilleurs projets de la promotion )</p>
             </article>
-            <article>
-                <img class="image_projet" src="img/lumieres.jpg" style="height: 40%; ">
+            <article style="flex-grow: 1">
+                <img class="image_projet" src="img/lumieres.jpg" style="height: 40%; width: 80%">
                 <h2>Lampes connectées</h2>
-                <p class="grey_text">Commande de la luminosité, intensité et couleur de trois lampes HueLights via une application Android. Utilisation du serveur CloudMQTT et d'une carte Arduino connecté, via un shield-Ethernet. Découverte du fonctionnement des "Beacons" pour détecter via Bluetooth les lampes à proximité.</p>
+                <p class="grey_text" style="text-align: justify">Commande de la luminosité, intensité et couleur de trois lampes HueLights via une application Android. Utilisation du serveur CloudMQTT et d'une carte Arduino connecté, via un shield-Ethernet. Découverte du fonctionnement des "Beacons" pour détecter via Bluetooth les lampes à proximité.</p>
+            </article>
+        </section>
+    </main>
+
+    <main id="competences" class="mainSecond">
+        <header>
+            <H3>Mes competences</H3>
+        </header>
+        <section>
+            <article class="carte">
+                <h2>TOEIC 915 pts</h2>
+                <img src="img/toeiccapitoleformation_0.png" width="200px" style="margin-top: 25%">
+            </article>
+            <article class="carte">
+                <h2>Prgorammation C++/Java/Swift/Android</h2>
+                <img src="img/C++.png" width="75px" style="margin-top: 5%; margin-left: 5%">
+                <img src="img/1200px-Java_programming_language_logo.svg.png" width="75px" style="margin-top: 5%; margin-left: 5%">
+                <img src="img/swift-og.png" width="75px" style="margin-top: 5%; margin-left: 5%">
+                <img src="img/androidLogo.png" width="75px" style="margin-top: 5%; margin-left: 5%; width: 200px;">
+
+            </article>
+            <article class="carte">
+                <h2>Programmation Web - full stack</h2>
+                <img src="img/web.png" width="250px" style="margin-top: 25%">
             </article>
         </section>
     </main>
@@ -146,14 +172,18 @@
                 <img src="img/adresse.png" class="icone">
                 <p>17 villa Seurat, 75014, Paris </p>
             </article>
-            <article class="mesInfos">
-                <img src="img/phone.png" class="icone">
-                <p>+33 6 66 17 25 38 </p>
-            </article>
-            <article class="mesInfos">
-                <img src="img/mail.png" class="icone">
-                <p>leonard.devincre@edu.ece.fr </p>
-            </article>
+            <a  href="tel:+33666172538" style="text-decoration : none; color : white;">
+                <article class="mesInfos">
+                    <img src="img/phone.png" class="icone">
+                    <p>+33 6 66 17 25 38 </p>
+                </article>
+            </a>
+            <a href="mailto:leonard.devincre@free.fr" style="text-decoration : none; color : white;">
+                <article class="mesInfos">
+                    <img src="img/mail.png" class="icone">
+                    <p>leonard.devincre@edu.ece.fr </p>
+                </article>
+            </a>
             <a href="https://www.linkedin.com/in/léonard-devincre-861308151/" style="text-decoration : none; color : white;">
                 <article class="mesInfos">
                         <img src="img/linkedIn.png" class="icone">
@@ -164,16 +194,16 @@
         <article style="margin: 1%">
             <form action="action_page.php">
                 <p>
-                    <label for="fPseudo">Pseudo</label>
-                    <input type="text" id="fPseudo" name="firstname" placeholder="Your name..">
+                    <label for="fPseudo">Nom</label>
+                    <input type="text" id="fPseudo" name="firstname" placeholder="Votre nom...">
 
                     <label for="lMail">Mail</label>
-                    <input type="text" id="lMail" name="lastname" placeholder="Your email..">
+                    <input type="text" id="lMail" name="lastname" placeholder="Votre mail...">
 
-                    <label for="lMail">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Write something..">
+                    <label for="lMail">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Un petit mot ? 😊" style="height: 50px">
                 </p>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Envoyer">
             </form>
         </article>
     </section>
